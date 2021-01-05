@@ -38,6 +38,7 @@ class App extends Component {
 
     return (
       <ApolloProvider client={client}>
+      //검색 폼
         <form onSubmit={this.handleSubmit}>
           <input value={query} onChange={this.handleChange} />
         </form>
