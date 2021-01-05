@@ -57,11 +57,14 @@ class App extends Component {
               return (
                 <React.Fragment>
                   <h2>{title}</h2>
+                //검색 리스트 표시
                   <ul>
                     {
+                      //맵으로 엣지를 하나씩 표시
                       search.edges.map(edge => {
                         const node = edge.node
 
+                      // li는 유니크한 키를 가져야함 node.id
                         return (
                           <li key={node.id}>
                             <a href={node.url} target="_blank">{node.name}</a>
