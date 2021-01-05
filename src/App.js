@@ -51,7 +51,9 @@ class App extends Component {
               if (error) return `Error! ${error.message}`
 
               const search = data.search
+              //건수
               const repositoryCount = search.repositoryCount
+              //건수가 1이면 Repository 그 이외는 Repositories로 표시
               const repositoryUnit = repositoryCount === 1 ? 'Repository' : 'Repositories'
               const title = `GitHub Repositories Search Results - ${repositoryCount} ${repositoryUnit}`
               return <h2>{title}</h2>
