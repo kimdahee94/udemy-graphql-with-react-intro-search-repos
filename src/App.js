@@ -23,6 +23,7 @@ const StarButton = props => {
   }
 
   return (
+    //스타가 되어 있으면 리무브 아니면 에드
     <Mutation mutation={viewerHasStarred ? REMOVE_STAR : ADD_STAR}>
       {
         addOrRemoveStar => <StarStatus addOrRemoveStar={addOrRemoveStar} />
