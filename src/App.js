@@ -10,6 +10,7 @@ const StarButton = props => {
   const viewerHasStarred = node.viewerHasStarred
   const starCount = totalCount === 1 ? "1 star" : `${totalCount} stars`
   return (
+    //스타를 눌렀으면 starred, 아니면 -을 표시
     <button>
       {starCount} | {viewerHasStarred ? 'starred' : '-'}
     </button>
