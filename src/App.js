@@ -25,6 +25,8 @@ const StarButton = props => {
               const newEdges = edges.map(edge => {
                 if (edge.node.id === node.id) {
                   const totalCount = edge.node.stargazers.totalCount
+                  //스타를 하면 1 더하기 아니면 -1
+                  //addStar or removeStar를 실행한 직후의 viewerHasStarred
                   const diff = starrable.viewerHasStarred ? 1 : -1
                   const newTotalCount = totalCount + diff
                   edge.node.stargazers.totalCount = newTotalCount
