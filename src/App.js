@@ -90,6 +90,7 @@ class App extends Component {
                     }
                   </ul>
 
+                  //전 페이지를 갈 수 있는 Previous 표시 전 페이지가 있다면 버튼 표시됨
                   {
                     search.pageInfo.hasPreviousPage === true ?
                       <button
@@ -100,6 +101,7 @@ class App extends Component {
                       :
                       null
                   }
+                  //다음 페이지를 갈 수 있는 Previous 표시 다음 페이지가 있다면 버튼 표시됨
                   {
                     search.pageInfo.hasNextPage === true ?
                       <button
