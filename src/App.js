@@ -75,6 +75,7 @@ class App extends Component {
     event.preventDefault()
 
     this.setState({
+      //검색되는 단어가 지금의 단어
       query: this.myRef.current.value
     })
   }
@@ -104,6 +105,7 @@ class App extends Component {
       <ApolloProvider client={client}>
         <form onSubmit={this.handleSubmit}>
           <input ref={this.myRef}/>
+          //Submit버튼이 눌러졌을때만 render()가 실행됨
           <input type="submit" value="Submit" />
         </form>
         <Query
