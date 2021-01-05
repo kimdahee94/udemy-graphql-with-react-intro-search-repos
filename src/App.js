@@ -25,6 +25,7 @@ const StarButton = props => {
   return (
     <Mutation
       mutation={viewerHasStarred ? REMOVE_STAR : ADD_STAR}
+      // Query를 Refetch시키고 싶은 경우
       refetchQueries={mutationResult => {
         console.log({mutationResult})
         return [
